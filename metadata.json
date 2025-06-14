@@ -1,0 +1,8 @@
+{
+  "name": "CiviLenz",
+  "description": "A React web application for civic reporting and engagement, enabling users to report violations, participate in missions, and view community data on a map. It includes features like CiviPoints, leaderboards, and AI-assisted report analysis using Gemini API.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "prompt": ""
+}

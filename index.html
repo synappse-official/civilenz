@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiviLenz</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+      /* Custom scrollbar for webkit browsers */
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+      }
+      .font-display {
+        font-family: 'Roboto Slab', serif;
+      }
+      /* Define custom colors for Tailwind based on CiviLenz theme */
+      /* This is better done in tailwind.config.js but for CDN, we can use CSS vars or specific overrides if needed */
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#0D47A1', // Deep Blue
+              secondary: '#FF8F00', // Orange Accent
+              background: '#F4F6F8', // Light Grayish Blue
+              card: '#FFFFFF', // White
+              textPrimary: '#1A202C', // Dark Gray / Black
+              textSecondary: '#4A5568', // Medium Gray
+              accent: {
+                positive: '#2E7D32', // Green
+                negative: '#C62828', // Red
+                neutral: '#1976D2', // Lighter Blue
+              },
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              display: ['Roboto Slab', 'serif'],
+            },
+            boxShadow: {
+              'subtle': '0 2px 4px 0 rgba(0,0,0,0.05)',
+              'strong': '0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1)',
+            }
+          }
+        }
+      }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "leaflet": "https://esm.sh/leaflet@^1.9.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.5.0",
+    "gsap/": "https://esm.sh/gsap@^3.13.0/",
+    "gsap": "https://esm.sh/gsap@^3.13.0",
+    "recharts": "https://esm.sh/recharts@^2.15.3",
+    "leaflet.heat": "https://esm.sh/leaflet.heat@^0.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-background">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
